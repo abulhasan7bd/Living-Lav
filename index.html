@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
     <style type="text/tailwindcss">
         *{
             font-family: "Sora", serif;
@@ -47,7 +50,21 @@
    .piyas {
     @apply bg-[#ece1e1] w-[60px] p-[1rem] rounded-[10px];
 }
-
+.offer-left{
+    @apply p-[2rem] border flex justify-between items-center rounded-[24px]
+}
+.offer-content button{
+    margin: 10px 0;
+}
+.offer-content h1{
+    font-weight: 700;
+    font-family: "Poppins";
+    color: white;
+    font-size: 1.4rem;
+}
+.offer-content h1 span{
+    @apply font-light 
+}
    .rating{
     @apply flex items-center gap-1
    }
@@ -167,7 +184,7 @@
                     <img class="w-[100%] object-cover" src="./assets/Group 14.png" alt="">
                 </div>
                 <div class="populer-right flex-2">
-                    <div class="populer-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-[2rem] lg:mt-0 gap-[2rem]">
+                    <div class="populer-cards grid grid-cols-1 md:gic lg:grid-cols-3 mt-[2rem] lg:mt-0 gap-[2rem]">
                         <div class="populer-card ">
                             <div class="piyas">
                                 <img src="./assets/piyas.png" alt="">
@@ -304,5 +321,36 @@
         </div>
     </section>
     <!-- Populer Product Section End  -->
+
+
+    <!-- Arrival Offer Start  -->
+    <section class="arrival-offer py-[4rem]">
+        <div class="container">
+            <h2 class=" text-[2rem] mb-5 font-semibold">Arrival & Offers</h2>
+            <div class="apprival-offer flex gap-[2rem]">
+                <div class="offer-left bg-[#115414] flex-4">
+                    <div class="offer-content">
+                        <div class="logo"><img src="./assets/dawat-logo.png" alt=""></div>
+                        <button class="px-[20px]">Cook Exotic Dishes</button>
+                        <h1><span>UP to</span> 20% OFF</h1>
+                    </div>
+                    <div class="offer-image">
+                        <img src="./assets/dawat-mock-up.png" alt="">
+                    </div>
+                </div>
+                <div class="offer-left offer-right bg-[#2A4D97] flex-3">
+                    <div class="offer-content">
+                        <div class="logo"><img src="./assets/dawat-logo.png" alt=""></div>
+                        <button class="px-[20px] bg-[#2a4d97] shadow-lg text-[#fff]">Cook Exotic Dishes</button>
+                        <h1><span>UP to </span>20% OFF</h1>
+                    </div>
+                    <div class="offer-image">
+                        <img src="./assets/india-gate-mock-up.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Arrival Offer End  -->
 </body>
 </html>
