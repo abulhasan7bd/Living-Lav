@@ -12,26 +12,60 @@
     <style type="text/tailwindcss">
         *{
             font-family: "Sora", serif;
+         
 
         }
 
         @layer components{
             .container {
-            @apply m-auto
+            @apply m-auto px-[3%]
         }
 
         li {
             @apply cursor-pointer text-[20px] font-normal
+        }
+        .service-card{
+            @apply mt-[2rem]
         }
         button{
             @apply bg-[#179800] font-normal rounded-md py-[6px] px-[34px] cursor-pointer text-[20px]
         }
         }
      i{
-        @apply text-[20px] font-normal cursor-pointer
+        @apply text-[2rem] font-normal cursor-pointer
      }
+
    @layer utilities {
 
+   }
+   .populer-card{
+    @apply bg-[#fff]  w-[100%]  h-[120px] flex justify-between gap-[10px] p-[2rem] items-center rounded-[16px] lg:w-[250px] lg:h-[100px] lg:p-[1rem]
+   }
+   /* .populer-card{
+    @apply bg-[#fff]  w-[250px] h-[100px] flex gap-[10px] p-[1rem] items-center rounded-[16px]
+   } */
+   .piyas {
+    @apply bg-[#ece1e1] w-[60px] p-[1rem] rounded-[10px];
+}
+
+   .rating{
+    @apply flex items-center gap-1
+   }
+   .rating i{
+    @apply text-[20px]
+   }
+ 
+   .populer-card-content h2{
+    @apply font-[600] text-[20px]
+   }
+   .rating h2{
+    @apply font-bold text-[15px] 
+   }
+   .populer-card-content p{
+    @apply font-medium text-[15px]
+   }
+   .rating i{
+    @apply text-[#ffc107]
    }
     </style>
 </head>
@@ -39,11 +73,11 @@
 
     <!-- Navbar  Start-->
     <nav>
-        <div class="container flex justify-between items-center border-2 border-red-200">
+        <div class="container flex justify-between items-center mt-[10px]">
             <div class="nav-logo">
                 <img class="w-full cursor-pointer" src="./assets/logo-header.png" alt="Nav_Logo">
             </div>
-            <div class="nav-right flex gap-[6rem] items-center">
+            <div class=" hidden lg:flex nav-right  gap-[6rem] items-center">
                 <ul class="flex gap-[1rem]">
                     <li>Products</li>
                     <li>Service</li>
@@ -60,8 +94,215 @@
                     </div>
                 </div>
             </div>
+            <div class="mobile-menu lg:hidden">
+                <i class="ri-menu-fill"></i>
+            </div>
         </div>
     </nav>
     <!-- Navbar end  -->
+
+
+    <!-- Hero Section  -->
+    <header class="bg-gradient-to-t  from-[#EFEBE3] to-[#FFFFFF]">
+        <div class="container">
+            <div class="hero-content">
+                <div class="text-center pt-[5rem]">
+                    <h2 class="text-[2.5rem] md:text-[3rem] lg:text-[3.8rem] font-black text-center  ">Freshness <span
+                            class="text-[#179800]"> You Can <br>
+                            Count</span> On, Prices You’ll Love!</h2>
+                    <p class="mt-[10px]">Shop your daily essentials at unbeatable prices. From fresh produce to pantry
+                        <br> staples, we’ve got you covered every day!
+                    </p>
+                </div>
+                <div>
+                    <img class="w-[100%] m-auto" src="./assets/hero-vegetables.png" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Hero section End  -->
+
+    <!-- Service Section Start -->
+    <section class="service py-[4rem]">
+        <div class="container">
+            <div class="service-content">
+                <h2 class="font-semibold text-[2rem] text-[#179800] "> Service</h2>
+                <div class="service-cards lg:grid grid-cols-3 gap-3">
+                    <div class="service-card bg-[#EFEBE3] p-[2.3rem] text-center rounded-[14px]">
+                        <div>
+                            <img src="./assets/service.png" alt="" class="w-[100px] m-auto">
+                        </div>
+                        <h3 class="font-semibold text-[22px] py-[6px]">24/7 Services </h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                    </div>
+                    <div class="service-card bg-[#EFEBE3] p-[2.3rem] text-center rounded-[14px]">
+                        <div>
+                            <img src="./assets/delivery.png" alt="" class="w-[100px] m-auto">
+                        </div>
+                        <h3 class="font-semibold text-[22px] py-[6px]">
+                            Fast Delivery </h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                    </div>
+
+                    <div class="service-card bg-[#EFEBE3] p-[2.3rem] text-center rounded-[14px]">
+                        <div>
+                            <img src="./assets/healthy.png" alt="" class="w-[100px] m-auto">
+                        </div>
+                        <h3 class="font-semibold text-[22px] py-[6px]">Healthy Products </h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Service Section End -->
+
+
+    <!-- Populer Product Section  -->
+    <section class="populer bg-gradient-to-t  from-[#dbd4c6] to-[#dfdada] py-[100px]">
+        <div class="container">
+            <h2 class="font-black py-[2rem] text-[2rem] text-[#179800]">Popular Products</h2>
+            <div class="populer-content lg:flex gap-[2rem] lg:gap-[1rem] justify-center  items-center">
+                <div class="populer-left flex-1">
+                    <img class="w-[100%] object-cover" src="./assets/Group 14.png" alt="">
+                </div>
+                <div class="populer-right flex-2">
+                    <div class="populer-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-[2rem] lg:mt-0 gap-[2rem]">
+                        <div class="populer-card ">
+                            <div class="piyas">
+                                <img src="./assets/piyas.png" alt="">
+                            </div>
+                            <div class="populer-card-content">
+                                <div class="rating">
+                                    <i class="ri-star-fill"></i>
+                                    <h2>4.5</h2>
+                                </div>
+                                <h2>Tomato 500 g </h2>
+                                <p>$39.99</p>
+                            </div>
+                        </div>
+                        <div class="populer-card">
+                            <div class="piyas">
+                                <img src="./assets/piyas.png" alt="">
+                            </div>
+                            <div class="populer-card-content">
+                                <div class="rating">
+                                    <i class="ri-star-fill"></i>
+                                    <h2>4.5</h2>
+                                </div>
+                                <h2>Tomato 500 g </h2>
+                                <p>$39.99</p>
+                            </div>
+                        </div>
+                        <div class="populer-card">
+                            <div class="piyas">
+                                <img src="./assets/piyas.png" alt="">
+                            </div>
+                            <div class="populer-card-content">
+                                <div class="rating">
+                                    <i class="ri-star-fill"></i>
+                                    <h2>4.5</h2>
+                                </div>
+                                <h2>Tomato 500 g </h2>
+                                <p>$39.99</p>
+                            </div>
+                        </div>
+                        <div class="populer-card">
+                            <div class="piyas">
+                                <img src="./assets/piyas.png" alt="">
+                            </div>
+                            <div class="populer-card-content">
+                                <div class="rating">
+                                    <i class="ri-star-fill"></i>
+                                    <h2>4.5</h2>
+                                </div>
+                                <h2>Tomato 500 g </h2>
+                                <p>$39.99</p>
+                            </div>
+                        </div>
+                        <div class="populer-card">
+                            <div class="piyas">
+                                <img src="./assets/piyas.png" alt="">
+                            </div>
+                            <div class="populer-card-content">
+                                <div class="rating">
+                                    <i class="ri-star-fill"></i>
+                                    <h2>4.5</h2>
+                                </div>
+                                <h2>Tomato 500 g </h2>
+                                <p>$39.99</p>
+                            </div>
+                        </div>
+                        <div class="populer-card">
+                            <div class="piyas">
+                                <img src="./assets/piyas.png" alt="">
+                            </div>
+                            <div class="populer-card-content">
+                                <div class="rating">
+                                    <i class="ri-star-fill"></i>
+                                    <h2>4.5</h2>
+                                </div>
+                                <h2>Tomato 500 g </h2>
+                                <p>$39.99</p>
+                            </div>
+                        </div>
+                        <div class="populer-card">
+                            <div class="piyas">
+                                <img src="./assets/piyas.png" alt="">
+                            </div>
+                            <div class="populer-card-content">
+                                <div class="rating">
+                                    <i class="ri-star-fill"></i>
+                                    <h2>4.5</h2>
+                                </div>
+                                <h2>Tomato 500 g </h2>
+                                <p>$39.99</p>
+                            </div>
+                        </div>
+                        <div class="populer-card">
+                            <div class="piyas">
+                                <img src="./assets/piyas.png" alt="">
+                            </div>
+                            <div class="populer-card-content">
+                                <div class="rating">
+                                    <i class="ri-star-fill"></i>
+                                    <h2>4.5</h2>
+                                </div>
+                                <h2>Tomato 500 g </h2>
+                                <p>$39.99</p>
+                            </div>
+                        </div>
+                        <div class="populer-card">
+                            <div class="piyas">
+                                <img src="./assets/piyas.png" alt="">
+                            </div>
+                            <div class="populer-card-content">
+                                <div class="rating">
+                                    <i class="ri-star-fill"></i>
+                                    <h2>4.5</h2>
+                                </div>
+                                <h2>Tomato 500 g </h2>
+                                <p>$39.99</p>
+                            </div>
+                        </div>
+                        <!-- <div class="populer-card  border">
+                            <div class="piyas">
+                                <img src="./assets/piyas.png" alt="">
+                            </div>
+                            <div class="populer-card-content">
+                                <div class="rating">
+                                    <i class="ri-star-fill"></i>
+                                    <h2>4.5</h2>
+                                </div>
+                                <h2>Tomato 500 g </h2>
+                                <p>$39.99</p>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Populer Product Section End  -->
 </body>
 </html>
