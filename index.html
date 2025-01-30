@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living Lav</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <style type="text/tailwindcss">
+        *{
+            font-family: "Sora", serif;
+
+        }
+
+        @layer components{
+            .container {
+            @apply m-auto
+        }
+
+        li {
+            @apply cursor-pointer text-[20px] font-normal
+        }
+        button{
+            @apply bg-[#179800] font-normal rounded-md py-[6px] px-[34px] cursor-pointer text-[20px]
+        }
+        }
+     i{
+        @apply text-[20px] font-normal cursor-pointer
+     }
+   @layer utilities {
+
+   }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar  Start-->
+    <nav>
+        <div class="container flex justify-between items-center border-2 border-red-200">
+            <div class="nav-logo">
+                <img class="w-full cursor-pointer" src="./assets/logo-header.png" alt="Nav_Logo">
+            </div>
+            <div class="nav-right flex gap-[6rem] items-center">
+                <ul class="flex gap-[1rem]">
+                    <li>Products</li>
+                    <li>Service</li>
+                    <li>Contact Us</li>
+                </ul>
+                <div class="nav-btns flex gap-[2rem] items-center">
+                    <div class="social-links flex gap-[2rem]">
+                        <i class="ri-search-line"></i>
+                        <i class="ri-shopping-cart-2-line"></i>
+                    </div>
+                    <div class="user-uses-btns flex gap-[1rem] ">
+                        <button class="bg-transparent border-2 border-[#179800]">Login</button>
+                        <button class=" ">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar end  -->
+</body>
+</html>
