@@ -37,7 +37,16 @@
         li:hover{
             @apply text-green
         }
-
+.hidex2{
+    display: none !important;
+   
+}
+@media(width>800px){
+    .hidex2{
+    display: flex !important;
+   
+} 
+}
         i{
         @apply text-[218px] font-normal cursor-pointer transition
      }
@@ -93,7 +102,7 @@
    }
  
    .populer-card-content h2{
-    @apply font-[600] text-[16px] lg:text-[20px]
+    @apply font-[600] text-[16px] lg:text-[18px]
    }
    .rating h2{
     @apply font-bold text-[15px] 
@@ -223,7 +232,8 @@
                     <img class="w-[100%] object-cover" src="./assets/Group 14.png" alt="">
                 </div>
                 <div class="populer-right flex-2">
-                    <div class="populer-cards grid grid-cols-2 lg:grid-cols-3 mt-[2rem] lg:mt-0 gap-[10px] lg:gap-[2rem]">
+                    <div
+                        class="populer-cards grid grid-cols-2 lg:grid-cols-3 mt-[2rem] lg:mt-0 gap-[10px] lg:gap-[2rem]">
                         <div class="populer-card">
                             <div class="piyas">
                                 <img src="./assets/piyas.png" alt="">
@@ -328,7 +338,7 @@
                                 <p>$39.99</p>
                             </div>
                         </div>
-                        <div class="populer-card cardhide">
+                        <div class="populer-card hidex2">
                             <div class="piyas">
                                 <img src="./assets/piyas.png" alt="">
                             </div>
@@ -341,7 +351,7 @@
                                 <p>$39.99</p>
                             </div>
                         </div>
-                    
+
                     </div>
                 </div>
             </div>
@@ -564,7 +574,8 @@
     <!-- Footer Section  -->
     <footer class="mt-[19rem]  bg-[#179800] pb-[1rem]">
         <div class="container">
-            <div class="footer-content bg-[#179800] w-[100%] h-[116vh] lg:h-[85vh] relative flex justify-end items-end">
+            <div
+                class="footer-content bg-[#179800] w-[100%] h-[136vh] md:h-[145vh] lg:h-[85vh] relative flex justify-end items-end">
 
                 <!-- topper  -->
                 <div
