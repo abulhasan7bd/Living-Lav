@@ -39,7 +39,7 @@
         }
 
         i{
-        @apply text-[20px] font-normal cursor-pointer transition
+        @apply text-[218px] font-normal cursor-pointer transition
      }
 
      button{
@@ -61,6 +61,9 @@
    }
    .populer-card{
     @apply bg-[#fff]  w-[100%]  h-[120px] flex justify-between gap-[5px] p-[2rem] items-center rounded-[16px] lg:w-[250px] lg:h-[100px] lg:p-[1rem]
+   }
+   .products{
+    @apply md:mt-0
    }
    /* .populer-card{
     @apply bg-[#fff]  w-[250px] h-[100px] flex gap-[10px] p-[1rem] items-center rounded-[16px]
@@ -102,6 +105,18 @@
    .rating i{
     @apply text-[#ffc107]
    }
+   .imganimate{
+    filter: blur(8px);
+    animation: blurimage 4s infinite linear alternate;
+    opacity: 0.40;
+   }
+   @keyframes blurimage{
+    to{
+        filter: blur(0);
+        opacity: 1;
+        transform: translateX(-30px);
+    }
+   }
     </style>
 </head>
 <body>
@@ -112,7 +127,7 @@
             <div class="nav-logo">
                 <img class="w-[130px] cursor-pointer" src="./assets/logo-header.png" alt="Nav_Logo">
             </div>
-            <div class=" hidden lg:flex nav-right  gap-[6rem] items-center">
+            <div class=" hidden lg:flex nav-right  gap-[4rem] items-center">
                 <ul class="flex gap-[1rem]">
                     <li>Products</li>
                     <li>Service</li>
@@ -120,8 +135,8 @@
                 </ul>
                 <div class="nav-btns flex gap-[2rem] items-center">
                     <div class="social-links flex gap-[2rem]">
-                        <i class="ri-search-line"></i>
-                        <i class="ri-shopping-cart-2-line"></i>
+                        <i class="ri-search-line text-black"></i>
+                        <i class="ri-shopping-cart-2-line text-black"></i>
                     </div>
                     <div class="user-uses-btns flex gap-[1rem] ">
                         <button class="bg-transparent border-3 border-[#179800] hover:bg-green ">Login</button>
@@ -150,8 +165,8 @@
                         <br> staples, we’ve got you covered every day!
                     </p>
                 </div>
-                <div>
-                    <img class="w-[80%] md:w-[90%] m-auto" src="./assets/hero-vegetables.png" alt="">
+                <div class="overflow-hidden">
+                    <img class="imganimate w-[80%] lg:w-[70%] m-auto" src="./assets/hero-vegetables.png" alt="">
                 </div>
             </div>
         </div>
@@ -341,7 +356,187 @@
     </section>
     <!-- Populer Product Section End  -->
 
+    <!-- my customize section -->
+    <section class="customize py-[100px] ">
+        <div class="container">
+            <div class="most-selling-content">
+                <h2 class="section-title ">Most Selling Products <span class="bg-black text-green px-[20px]">in
+                        Month</span></h2>
+                <p class="text-[15px] text-justify   md:pr-[4rem]"> Our top-selling product combines innovation, quality, and reliability,
+                    offering unmatched performance and value. Designed to meet customer needs, it consistently delivers
+                    exceptional results, making it a favorite choice for many.</p>
 
+                <div class="products-container mt-[2rem] md:grid grid-cols-3 gap-[2rem]">
+                    <div class="products  bg-[#efebe3] p-[20px] rounded-[13px] w-[100%] m-auto ">
+                        <div class=" ">
+                            <img class="w-[100%] h-auto rounded-[13px] m-auto object-cover"
+                                src="https://img.freepik.com/free-vector/cosmetics-shopping-cart_98292-6793.jpg?uid=R90026751&ga=GA1.1.1322734213.1735572178&semt=ais_hybrid_sidr"
+                                alt="">
+                        </div>
+                        <div class="product-content ">
+                            <div class="flex justify-between items-center mt-3">
+                                <h5 class="font-bold  text-[1.5rem]">Baby lotion</h5>
+                                <p class="text-green">Apple</p>
+                            </div>
+                            <p class="font-[300] text-[17px]">
+                                This baby lotion is for use by individuals under 18; it works to control skin care, so
+                                use carefully.</p>
+                            <div class="content-ration flex items-center gap-[2rem]">
+                                <b>Price $600</b>
+                                <div class=" flex gap-[6px]">
+                                    <i class="ri-star-fill text-yellow-400 text-[18px]"></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="products  bg-[#efebe3] p-[20px] rounded-[13px] w-[100%] m-auto mt-10 ">
+                        <div class=" ">
+                            <img class="w-[100%] h-auto rounded-[13px] m-auto object-cover"
+                                src="https://img.freepik.com/free-vector/shopping-clothing-fashion-icon-isolated_18591-82227.jpg?t=st=1738335913~exp=1738339513~hmac=26baa884811456fd1e7c5e9302da06300a8916cc7251ae9bbd7e7462d54ea6f3&w=740"
+                                alt="">
+                        </div>
+                        <div class="product-content ">
+                            <div class="flex justify-between items-center mt-3">
+                                <h5 class="font-bold  text-[1.5rem]">Baby lotion</h5>
+                                <p class="text-green">L'Oréal
+                                </p>
+                            </div>
+                            <p class="font-[300] text-[17px]">
+                                This baby lotion is for use by individuals under 18; it works to control skin care, so
+                                use carefully.</p>
+                            <div class="content-ration flex items-center gap-[2rem]">
+                                <b>Price $600</b>
+                                <div class=" flex gap-[6px]">
+                                    <i class="ri-star-fill text-yellow-400 text-[18px]"></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="products  bg-[#efebe3] p-[20px] rounded-[13px] w-[100%] m-auto mt-10 ">
+                        <div class=" ">
+                            <img class="w-[100%] h-auto rounded-[13px] m-auto object-cover"
+                                src="https://img.freepik.com/free-vector/soccer-ball-realistic-white-black-picture_1284-8506.jpg?uid=R90026751&ga=GA1.1.1322734213.1735572178&semt=ais_hybrid_sidr"
+                                alt="">
+                        </div>
+                        <div class="product-content ">
+                            <div class="flex justify-between items-center mt-3">
+                                <h5 class="font-bold  text-[1.5rem]">Baby lotion</h5>
+                                <p class="text-green">Gucci
+                                </p>
+                            </div>
+                            <p class="font-[300] text-[17px]">
+                                This baby lotion is for use by individuals under 18; it works to control skin care, so
+                                use carefully.</p>
+                            <div class="content-ration flex items-center gap-[2rem]">
+                                <b>Price $600</b>
+                                <div class=" flex gap-[6px]">
+                                    <i class="ri-star-fill text-yellow-400 text-[18px]"></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="products  bg-[#efebe3] p-[20px] rounded-[13px] w-[100%] m-auto mt-10 ">
+                        <div class=" ">
+                            <img class="w-[100%] h-auto rounded-[13px] m-auto object-cover"
+                                src="https://img.freepik.com/free-vector/realistic-glass-cup-filled-hot-steaming-coffee-mug-with-double-wall-full-aroma-americano-espresso-drink-with-smoke-isolated-transparent-background-template-advertising-product-design_88138-555.jpg?uid=R90026751&ga=GA1.1.1322734213.1735572178&semt=ais_hybrid_sidr"
+                                alt="">
+                        </div>
+                        <div class="product-content ">
+                            <div class="flex justify-between items-center mt-3">
+                                <h5 class="font-bold  text-[1.5rem]">Baby lotion</h5>
+                                <p class="text-green">Colgate
+                                </p>
+                            </div>
+                            <p class="font-[300] text-[17px]">
+                                This baby lotion is for use by individuals under 18; it works to control skin care, so
+                                use carefully.</p>
+                            <div class="content-ration flex items-center gap-[2rem]">
+                                <b>Price $600</b>
+                                <div class=" flex gap-[6px]">
+                                    <i class="ri-star-fill text-yellow-400 text-[18px]"></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="products  bg-[#efebe3] p-[20px] rounded-[13px] w-[100%] m-auto mt-10 ">
+                        <div class=" ">
+                            <img class="w-[100%] h-auto rounded-[13px] m-auto object-cover"
+                                src="https://img.freepik.com/free-vector/cup-tea-vector-realistic-isolated-white-illlustration-plate_1268-18066.jpg?uid=R90026751&ga=GA1.1.1322734213.1735572178&semt=ais_hybrid_sidr"
+                                alt="">
+                        </div>
+                        <div class="product-content ">
+                            <div class="flex justify-between items-center mt-3">
+                                <h5 class="font-bold  text-[1.5rem]">Baby lotion</h5>
+                                <p class="text-green">Adidas
+                                </p>
+                            </div>
+                            <p class="font-[300] text-[17px]">
+                                This baby lotion is for use by individuals under 18; it works to control skin care, so
+                                use carefully.</p>
+                            <div class="content-ration flex items-center gap-[2rem]">
+                                <b>Price $600</b>
+                                <div class=" flex gap-[6px]">
+                                    <i class="ri-star-fill text-yellow-400 text-[18px]"></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="products  bg-[#efebe3] p-[20px] rounded-[13px] w-[100%] m-auto mt-10 ">
+                            <div class=" ">
+                            <img class="w-[100%] h-auto rounded-[13px] m-auto object-cover"
+                                src="https://img.freepik.com/free-vector/lovers-couple-holding-read-heart-together-happy-valentine-cartoon-character-illustration_56104-389.jpg?uid=R90026751&ga=GA1.1.1322734213.1735572178&semt=ais_hybrid_sidr"
+                                alt="">
+                        </div>
+                        <div class="product-content ">
+                            <div class="flex justify-between items-center mt-3">
+                                <h5 class="font-bold  text-[1.5rem]">Baby lotion</h5>
+                                <p class="text-green">Dove
+
+                                </p>
+                            </div>
+                            <p class="font-[300] text-[17px]">
+                                This baby lotion is for use by individuals under 18; it works to control skin care, so
+                                use carefully.</p>
+                            <div class="content-ration flex items-center gap-[2rem]">
+                                <b>Price $600</b>
+                                <div class=" flex gap-[6px]">
+                                    <i class="ri-star-fill text-yellow-400 text-[18px]"></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                    <i class="ri-star-fill  text-yellow-400 text-[18px]"></i></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Arrival Offer Start  -->
     <section class="arrival-offer py-[4rem]">
         <div class="container">
@@ -392,7 +587,8 @@
                         <input
                             class="bg-[#fff] p-[17px] w-[100%] rounded-[8px] border-none outline-none my-[25px] lg:w-[70%]"
                             type="text" placeholder="Enter email....">
-                        <button class="x-[40px] py-[12px]">Subscribe</button>
+                        <button
+                            class="x-[40px] py-[12px] border-none outline-none hover:border-[2px]">Subscribe</button>
                     </div>
                 </div>
 
