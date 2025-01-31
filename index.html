@@ -48,6 +48,10 @@
         .service-card{
             @apply mt-[2rem]
         }
+        /* footer  */
+        .social-links i{
+            @apply text-white text-[2.1rem] font-normal cursor-pointer
+        }
       
         }
    
@@ -56,7 +60,7 @@
 
    }
    .populer-card{
-    @apply bg-[#fff]  w-[100%]  h-[120px] flex justify-between gap-[10px] p-[2rem] items-center rounded-[16px] lg:w-[250px] lg:h-[100px] lg:p-[1rem]
+    @apply bg-[#fff]  w-[100%]  h-[120px] flex justify-between gap-[5px] p-[2rem] items-center rounded-[16px] lg:w-[250px] lg:h-[100px] lg:p-[1rem]
    }
    /* .populer-card{
     @apply bg-[#fff]  w-[250px] h-[100px] flex gap-[10px] p-[1rem] items-center rounded-[16px]
@@ -65,7 +69,7 @@
     @apply bg-[#ece1e1] w-[60px] p-[1rem] rounded-[10px];
 }
 .offer-left{
-    @apply p-[2rem] border flex justify-between items-center rounded-[24px]
+    @apply p-[1rem]  flex justify-between items-center rounded-[24px]
 }
 .offer-content button{
     margin: 10px 0;
@@ -139,8 +143,8 @@
         <div class="container">
             <div class="hero-content">
                 <div class="text-center pt-[5rem]">
-                    <h2 class="text-[2.5rem] md:text-[3rem] md:mt-[2rem] lg:text-[3.8rem] font-black text-center ">Freshness <span
-                            class="text-[#179800]"> You Can <br>
+                    <h2 class="text-[2.5rem] md:text-[3rem] md:mt-[2rem] lg:text-[3.8rem] font-black text-center ">
+                        Freshness <span class="text-[#179800]"> You Can <br>
                             Count</span> On, Prices You’ll Love!</h2>
                     <p class="mt-[10px]">Shop your daily essentials at unbeatable prices. From fresh produce to pantry
                         <br> staples, we’ve got you covered every day!
@@ -344,13 +348,13 @@
             <h2 class="section-title mb-5 ">Arrival & Offers</h2>
             <div class="apprival-offer lg:flex gap-[2rem]">
                 <div class="offer-left bg-[#115414] flex-4 mb-[2rem] lg:mb-0">
-                    <div class="offer-content">
+                    <div class="offer-content  ">
                         <div class="logo"><img src="./assets/dawat-logo.png" alt=""></div>
-                        <button class="px-[20px]">Cook Exotic Dishes</button>
+                        <button class="px-[20px] text-[18px]">Cook Exotic Dishes</button>
                         <h1><span>UP to</span> 20% OFF</h1>
                     </div>
                     <div class="offer-image">
-                        <img src="./assets/dawat-mock-up.png" alt="">
+                        <img class="w-[100%]" src="./assets/dawat-mock-up.png" alt="">
                     </div>
                 </div>
                 <div class="offer-left offer-right bg-[#102861] flex-3">
@@ -382,7 +386,8 @@
                     </div>
                     <div class="topper-content   flex flex-col justify-center items-center lg:items-start">
                         <h2 class="text-[30px] lg:text-[36px] font-bold mb-[10px]">Get Grocery News!</h2>
-                        <p class="font-normal text-[18px] lg:text-[20px] text-center lg:text-left">Exclusive training tips, ticks,  
+                        <p class="font-normal text-[18px] lg:text-[20px] text-center lg:text-left">Exclusive training
+                            tips, ticks,
                             product deals and more.</p>
                         <input
                             class="bg-[#fff] p-[17px] w-[100%] rounded-[8px] border-none outline-none my-[25px] lg:w-[70%]"
@@ -405,8 +410,8 @@
                         <li class="hover:text-white">Contact Us</li>
                     </ul>
                     <div class="footer-col1 grid place-items-end  w-fit text-left">
-                        <p class="text-left  w-full text-[20px] font-normal">Follow Us</p>
-                        <div class="social-links">
+                        <p class="text-left  w-full text-[20px] font-normal ">Follow Us</p>
+                        <div class="social-links ">
                             <i class="ri-facebook-circle-fill"></i>
                             <i class="ri-instagram-fill"></i>
                             <i class="ri-linkedin-box-fill"></i>
@@ -416,6 +421,10 @@
                 </div>
             </div>
         </div>
+        <p class="text-center text-[1rem] mt-[4rem] font-normal py-4">
+            &copy; 2025 All Rights Reserved | Developed by Abul Hasan
+        </p>
+
     </footer>
     <!-- Footer Section  End-->
 </body>
