@@ -15,29 +15,43 @@
     <style type="text/tailwindcss">
         *{
             font-family: "Sora", serif;
-         
-
+        }
+        @theme {
+            --color-green: #179800;
         }
 
+
+        /* COMPONENTS  */
         @layer components{
             .container {
             @apply m-auto px-[3%]
+         }
+
+         .section-title{
+            @apply font-semibold text-[2rem] text-green md:text-[2.8rem]
+         }
+        li {
+            @apply cursor-pointer text-[18px] font-normal transition;
+        
+        }
+        li:hover{
+            @apply text-green
         }
 
-        li {
-            @apply cursor-pointer text-[20px] font-normal
+        i{
+        @apply text-[20px] font-normal cursor-pointer transition
+     }
+
+     button{
+            @apply bg-green outline-none  font-normal rounded-md py-[6px] px-[34px] cursor-pointer text-[20px] transition duration-[1s] ease-linear;
         }
         .service-card{
             @apply mt-[2rem]
         }
-        button{
-            @apply bg-[#179800] font-normal rounded-md py-[6px] px-[34px] cursor-pointer text-[20px]
+      
         }
-        }
-     i{
-        @apply text-[2rem] font-normal cursor-pointer
-     }
-
+   
+        /* UTILITIES  */
    @layer utilities {
 
    }
@@ -90,9 +104,9 @@
 
     <!-- Navbar  Start-->
     <nav>
-        <div class="container flex justify-between items-center mt-[10px]">
+        <div class="container flex justify-between items-center p-[1rem]">
             <div class="nav-logo">
-                <img class="w-full cursor-pointer" src="./assets/logo-header.png" alt="Nav_Logo">
+                <img class="w-[130px] cursor-pointer" src="./assets/logo-header.png" alt="Nav_Logo">
             </div>
             <div class=" hidden lg:flex nav-right  gap-[6rem] items-center">
                 <ul class="flex gap-[1rem]">
@@ -106,25 +120,26 @@
                         <i class="ri-shopping-cart-2-line"></i>
                     </div>
                     <div class="user-uses-btns flex gap-[1rem] ">
-                        <button class="bg-transparent border-2 border-[#179800]">Login</button>
-                        <button class=" ">Register</button>
+                        <button class="bg-transparent border-3 border-[#179800] hover:bg-green ">Login</button>
+                        <button class="hover:bg-transparent border-2       
+                         border-green">Register</button>
                     </div>
                 </div>
             </div>
             <div class="mobile-menu lg:hidden">
-                <i class="ri-menu-fill"></i>
+                <i class="ri-menu-fill text-[2rem] hover:text-green"></i>
             </div>
         </div>
     </nav>
     <!-- Navbar end  -->
 
 
-    <!-- Hero Section  -->
-    <header class="bg-gradient-to-t  from-[#EFEBE3] to-[#FFFFFF]">
+    <!-- Hero Section Start -->
+    <header class=" bg-gradient-to-t  from-[#EFEBE3] to-[#FFFFFF]">
         <div class="container">
             <div class="hero-content">
                 <div class="text-center pt-[5rem]">
-                    <h2 class="text-[2.5rem] md:text-[3rem] lg:text-[3.8rem] font-black text-center  ">Freshness <span
+                    <h2 class="text-[2.5rem] md:text-[3rem] md:mt-[2rem] lg:text-[3.8rem] font-black text-center ">Freshness <span
                             class="text-[#179800]"> You Can <br>
                             Count</span> On, Prices You’ll Love!</h2>
                     <p class="mt-[10px]">Shop your daily essentials at unbeatable prices. From fresh produce to pantry
@@ -132,7 +147,7 @@
                     </p>
                 </div>
                 <div>
-                    <img class="w-[100%] m-auto" src="./assets/hero-vegetables.png" alt="">
+                    <img class="w-[80%] md:w-[90%] m-auto" src="./assets/hero-vegetables.png" alt="">
                 </div>
             </div>
         </div>
@@ -143,7 +158,7 @@
     <section class="service py-[4rem]">
         <div class="container">
             <div class="service-content">
-                <h2 class="font-semibold text-[2rem] text-[#179800] "> Service</h2>
+                <h2 class="section-title"> Service</h2>
                 <div class="service-cards lg:grid grid-cols-3 gap-3">
                     <div class="service-card bg-[#EFEBE3] p-[2.3rem] text-center rounded-[14px]">
                         <div>
@@ -178,7 +193,7 @@
     <!-- Populer Product Section  -->
     <section class="populer bg-gradient-to-t  from-[#dbd4c6] to-[#dfdada] py-[100px]">
         <div class="container">
-            <h2 class="font-black py-[2rem] text-[2rem] text-[#179800]">Popular Products</h2>
+            <h2 class="section-title mb-[1rem]">Popular Products</h2>
             <div class="populer-content lg:flex gap-[2rem] lg:gap-[1rem] justify-center  items-center">
                 <div class="populer-left flex-1">
                     <img class="w-[100%] object-cover" src="./assets/Group 14.png" alt="">
@@ -326,7 +341,7 @@
     <!-- Arrival Offer Start  -->
     <section class="arrival-offer py-[4rem]">
         <div class="container">
-            <h2 class=" text-[2rem] mb-5 font-semibold">Arrival & Offers</h2>
+            <h2 class="section-title mb-5 ">Arrival & Offers</h2>
             <div class="apprival-offer lg:flex gap-[2rem]">
                 <div class="offer-left bg-[#115414] flex-4 mb-[2rem] lg:mb-0">
                     <div class="offer-content">
@@ -354,20 +369,24 @@
     <!-- Arrival Offer End  -->
 
     <!-- Footer Section  -->
-    <footer class="mt-[19rem]  bg-[#179800] pb-[6rem]">
+    <footer class="mt-[19rem]  bg-[#179800] pb-[3rem]">
         <div class="container">
-            <div class="footer-content bg-[#179800] w-[100%] h-[160vh] lg:h-[95vh] relative flex justify-end items-end">
+            <div class="footer-content bg-[#179800] w-[100%] h-[116vh] lg:h-[85vh] relative flex justify-end items-end">
 
                 <!-- topper  -->
-                <div class="footer-toper absolute w-full h-fit bg-[#EFEBE3] left-0 top-0 translate-y-[-50%] lg:flex justify-center items-center gap-[5rem] rounded-[14px] p-[2rem]">
+                <div
+                    class="footer-toper absolute w-full h-fit bg-[#EFEBE3] left-0 top-0 translate-y-[-50%] lg:flex justify-center items-center  gap-[5rem] rounded-[14px] p-[2rem]">
 
                     <div class="topperimg">
                         <img class="w-[70%] lg:w-[100%] m-auto" src="./assets/vegetable-busket.png" alt="">
                     </div>
                     <div class="topper-content   flex flex-col justify-center items-center lg:items-start">
                         <h2 class="text-[30px] lg:text-[36px] font-bold mb-[10px]">Get Grocery News!</h2>
-                        <p class="font-normal text-[18px] lg:text-[20px] text-center">Exclusive training tips, ticks, product deals and more.</p>
-                        <input class="bg-[#fff] p-[17px] w-[100%] rounded-[8px] border-none outline-none my-[25px] lg:w-[70%]" type="text" placeholder="Enter email....">
+                        <p class="font-normal text-[18px] lg:text-[20px] text-center lg:text-left">Exclusive training tips, ticks,  
+                            product deals and more.</p>
+                        <input
+                            class="bg-[#fff] p-[17px] w-[100%] rounded-[8px] border-none outline-none my-[25px] lg:w-[70%]"
+                            type="text" placeholder="Enter email....">
                         <button class="x-[40px] py-[12px]">Subscribe</button>
                     </div>
                 </div>
@@ -377,14 +396,15 @@
                     w-[100%] ">
                     <div class="footer-col1 flex-1 ">
                         <img class="w-[200px] cursor-pointer" src="./assets/logo-footer.png" alt="Footer-Logo">
-                        <p class="text-[20px] font-normal text-[rgba(255, 255, 255, 0.7)]">Discover a world of treats, toys, and essentials handpicked for your furry friends</p>
+                        <p class="text-[20px] font-normal text-[rgba(255, 255, 255, 0.7)]">Discover a world of treats,
+                            toys, and essentials handpicked for your furry friends</p>
                     </div>
                     <ul class="footer-col1 flex-1 flex flex-col justify-between my-[35px] lg:m-0 ">
-                        <li>Product</li>
-                        <li class=" py-[7px] lg:py-[15px]">Service</li>
-                        <li>Contact Us</li>
+                        <li class="hover:text-white">Product</li>
+                        <li class="hover:text-white py-[7px] lg:py-[15px]">Service</li>
+                        <li class="hover:text-white">Contact Us</li>
                     </ul>
-                    <div class="footer-col1 grid place-items-end  w-fit text-left" >
+                    <div class="footer-col1 grid place-items-end  w-fit text-left">
                         <p class="text-left  w-full text-[20px] font-normal">Follow Us</p>
                         <div class="social-links">
                             <i class="ri-facebook-circle-fill"></i>
