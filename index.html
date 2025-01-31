@@ -41,7 +41,6 @@
         i{
         @apply text-[218px] font-normal cursor-pointer transition
      }
-
      button{
             @apply bg-green outline-none  font-normal rounded-md py-[6px] px-[34px] cursor-pointer text-[20px] transition duration-[1s] ease-linear;
         }
@@ -60,7 +59,7 @@
 
    }
    .populer-card{
-    @apply bg-[#fff]  w-[100%]  h-[120px] flex justify-between gap-[5px] p-[2rem] items-center rounded-[16px] lg:w-[250px] lg:h-[100px] lg:p-[1rem]
+    @apply bg-[#fff]  w-[100%]  h-auto flex   justify-center md:justify-between gap-[10%] p-[10px] items-center rounded-[16px] lg:w-[250px] lg:h-[100px] lg:p-[1rem]
    }
    .products{
     @apply md:mt-0
@@ -94,7 +93,7 @@
    }
  
    .populer-card-content h2{
-    @apply font-[600] text-[20px]
+    @apply font-[600] text-[16px] lg:text-[20px]
    }
    .rating h2{
     @apply font-bold text-[15px] 
@@ -124,8 +123,11 @@
     <!-- Navbar  Start-->
     <nav>
         <div class="container flex justify-between items-center p-[1rem]">
-            <div class="nav-logo">
+            <div class="nav-logo hidden md:block ">
                 <img class="w-[130px] cursor-pointer" src="./assets/logo-header.png" alt="Nav_Logo">
+            </div>
+            <div class="navlogo md:hidden">
+                <img src="./assets/mobilelo.png" alt="">
             </div>
             <div class=" hidden lg:flex nav-right  gap-[4rem] items-center">
                 <ul class="flex gap-[1rem]">
@@ -180,27 +182,30 @@
                 <h2 class="section-title"> Service</h2>
                 <div class="service-cards lg:grid grid-cols-3 gap-3">
                     <div class="service-card bg-[#EFEBE3] p-[2.3rem] text-center rounded-[14px]">
-                        <div>
+                        <div class="bg-[#fff] w-fit m-auto p-[2rem] rounded-[50%]">
                             <img src="./assets/service.png" alt="" class="w-[100px] m-auto">
                         </div>
-                        <h3 class="font-semibold text-[22px] py-[6px]">24/7 Services </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                        <h3 class="font-semibold text-[25px]  py-[10px]">24/7 Services </h3>
+                        <p>We are committed to providing round-the-clock support, ensuring that you always have access
+                            to the services you need, no matter the time of day.</p>
                     </div>
                     <div class="service-card bg-[#EFEBE3] p-[2.3rem] text-center rounded-[14px]">
-                        <div>
+                        <div class="bg-[#fff] w-fit m-auto p-[2rem] rounded-[50%]">
                             <img src="./assets/delivery.png" alt="" class="w-[100px] m-auto">
                         </div>
-                        <h3 class="font-semibold text-[22px] py-[6px]">
+                        <h3 class="font-semibold text-[25px]  py-[10px]">
                             Fast Delivery </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                        <p>We prioritize fast and efficient delivery, ensuring your products reach you as quickly as
+                            possible, without compromising quality.</p>
                     </div>
 
                     <div class="service-card bg-[#EFEBE3] p-[2.3rem] text-center rounded-[14px]">
-                        <div>
+                        <div class="bg-[#fff] w-fit m-auto p-[2rem] rounded-[50%]">
                             <img src="./assets/healthy.png" alt="" class="w-[100px] m-auto">
                         </div>
-                        <h3 class="font-semibold text-[22px] py-[6px]">Healthy Products </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                        <h3 class="font-semibold text-[25px] py-[10px]">Healthy Products </h3>
+                        <p>Our products are carefully selected to support a healthy lifestyle, made from high-quality
+                            ingredients that nourish your body and mind.</p>
                     </div>
                 </div>
             </div>
@@ -218,20 +223,7 @@
                     <img class="w-[100%] object-cover" src="./assets/Group 14.png" alt="">
                 </div>
                 <div class="populer-right flex-2">
-                    <div class="populer-cards grid grid-cols-1 md:gic lg:grid-cols-3 mt-[2rem] lg:mt-0 gap-[2rem]">
-                        <div class="populer-card ">
-                            <div class="piyas">
-                                <img src="./assets/piyas.png" alt="">
-                            </div>
-                            <div class="populer-card-content">
-                                <div class="rating">
-                                    <i class="ri-star-fill"></i>
-                                    <h2>4.5</h2>
-                                </div>
-                                <h2>Tomato 500 g </h2>
-                                <p>$39.99</p>
-                            </div>
-                        </div>
+                    <div class="populer-cards grid grid-cols-2 lg:grid-cols-3 mt-[2rem] lg:mt-0 gap-[10px] lg:gap-[2rem]">
                         <div class="populer-card">
                             <div class="piyas">
                                 <img src="./assets/piyas.png" alt="">
@@ -336,7 +328,7 @@
                                 <p>$39.99</p>
                             </div>
                         </div>
-                        <!-- <div class="populer-card  border">
+                        <div class="populer-card cardhide">
                             <div class="piyas">
                                 <img src="./assets/piyas.png" alt="">
                             </div>
@@ -348,7 +340,8 @@
                                 <h2>Tomato 500 g </h2>
                                 <p>$39.99</p>
                             </div>
-                        </div> -->
+                        </div>
+                    
                     </div>
                 </div>
             </div>
@@ -362,14 +355,15 @@
             <div class="most-selling-content">
                 <h2 class="section-title ">Most Selling Products <span class="bg-black text-green px-[20px]">in
                         Month</span></h2>
-                <p class="text-[15px] text-justify   md:pr-[4rem]"> Our top-selling product combines innovation, quality, and reliability,
+                <p class="text-[15px] lg:text-[18px] text-justify   md:pr-[4rem]"> Our top-selling product combines
+                    innovation, quality, and reliability,
                     offering unmatched performance and value. Designed to meet customer needs, it consistently delivers
                     exceptional results, making it a favorite choice for many.</p>
 
                 <div class="products-container mt-[2rem] md:grid grid-cols-3 gap-[2rem]">
                     <div class="products  bg-[#efebe3] p-[20px] rounded-[13px] w-[100%] m-auto ">
                         <div class=" ">
-                            <img class="w-[100%] h-auto rounded-[13px] m-auto object-cover"
+                            <img class=" w-[100%] h-auto rounded-[13px] m-auto object-cover"
                                 src="https://img.freepik.com/free-vector/cosmetics-shopping-cart_98292-6793.jpg?uid=R90026751&ga=GA1.1.1322734213.1735572178&semt=ais_hybrid_sidr"
                                 alt="">
                         </div>
@@ -402,7 +396,7 @@
                         </div>
                         <div class="product-content ">
                             <div class="flex justify-between items-center mt-3">
-                                <h5 class="font-bold  text-[1.5rem]">Baby lotion</h5>
+                                <h5 class="font-bold  text-[1.5rem]">T Shirts</h5>
                                 <p class="text-green">L'Oréal
                                 </p>
                             </div>
@@ -459,7 +453,7 @@
                         </div>
                         <div class="product-content ">
                             <div class="flex justify-between items-center mt-3">
-                                <h5 class="font-bold  text-[1.5rem]">Baby lotion</h5>
+                                <h5 class="font-bold  text-[1.5rem]">Tea of Rangamati</h5>
                                 <p class="text-green">Colgate
                                 </p>
                             </div>
@@ -478,7 +472,7 @@
                             </div>
                         </div>
                     </div>
-                        <div class="products  bg-[#efebe3] p-[20px] rounded-[13px] w-[100%] m-auto mt-10 ">
+                    <div class="products  bg-[#efebe3] p-[20px] rounded-[13px] w-[100%] m-auto mt-10 ">
                         <div class=" ">
                             <img class="w-[100%] h-auto rounded-[13px] m-auto object-cover"
                                 src="https://img.freepik.com/free-vector/cup-tea-vector-realistic-isolated-white-illlustration-plate_1268-18066.jpg?uid=R90026751&ga=GA1.1.1322734213.1735572178&semt=ais_hybrid_sidr"
@@ -505,15 +499,15 @@
                             </div>
                         </div>
                     </div>
-                        <div class="products  bg-[#efebe3] p-[20px] rounded-[13px] w-[100%] m-auto mt-10 ">
-                            <div class=" ">
+                    <div class="products  bg-[#efebe3] p-[20px] rounded-[13px] w-[100%] m-auto mt-10 ">
+                        <div class=" ">
                             <img class="w-[100%] h-auto rounded-[13px] m-auto object-cover"
                                 src="https://img.freepik.com/free-vector/lovers-couple-holding-read-heart-together-happy-valentine-cartoon-character-illustration_56104-389.jpg?uid=R90026751&ga=GA1.1.1322734213.1735572178&semt=ais_hybrid_sidr"
                                 alt="">
                         </div>
                         <div class="product-content ">
                             <div class="flex justify-between items-center mt-3">
-                                <h5 class="font-bold  text-[1.5rem]">Baby lotion</h5>
+                                <h5 class="font-bold  text-[1.5rem]">Baby Gift</h5>
                                 <p class="text-green">Dove
 
                                 </p>
@@ -538,7 +532,7 @@
         </div>
     </section>
     <!-- Arrival Offer Start  -->
-    <section class="arrival-offer py-[4rem]">
+    <section class="arrival-offer py-[1rem]">
         <div class="container">
             <h2 class="section-title mb-5 ">Arrival & Offers</h2>
             <div class="apprival-offer lg:flex gap-[2rem]">
@@ -568,7 +562,7 @@
     <!-- Arrival Offer End  -->
 
     <!-- Footer Section  -->
-    <footer class="mt-[19rem]  bg-[#179800] pb-[3rem]">
+    <footer class="mt-[19rem]  bg-[#179800] pb-[1rem]">
         <div class="container">
             <div class="footer-content bg-[#179800] w-[100%] h-[116vh] lg:h-[85vh] relative flex justify-end items-end">
 
@@ -617,7 +611,7 @@
                 </div>
             </div>
         </div>
-        <p class="text-center text-[1rem] mt-[4rem] font-normal py-4">
+        <p class="text-center text-[1rem] mt-[1rem] font-normal py-4">
             &copy; 2025 All Rights Reserved | Developed by Abul Hasan
         </p>
 
