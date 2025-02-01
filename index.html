@@ -18,6 +18,7 @@
         }
         @theme {
             --color-green: #179800;
+            --breakpoint-sml: 400px;
         }
 
 
@@ -68,7 +69,7 @@
 
    }
    .populer-card{
-    @apply bg-[#fff]  w-[100%]  h-auto flex   justify-center md:justify-between gap-[10%] p-[10px] items-center rounded-[16px] lg:w-[250px] lg:h-[100px] lg:p-[1rem]
+    @apply bg-[#fff]  w-[100%]  h-auto flex   justify-center md:justify-between gap-[4%] p-[6px] items-center rounded-[16px] lg:w-[250px] lg:h-[100px] lg:p-[1rem]
    }
    .products{
     @apply md:mt-0
@@ -98,17 +99,17 @@
     @apply flex items-center gap-1
    }
    .rating i{
-    @apply text-[20px]
+    @apply text-[15px] 
    }
  
    .populer-card-content h2{
-    @apply font-[600] text-[16px] lg:text-[18px]
+    @apply font-[800] sml:text-[14px] lg:text-[18px] 
    }
    .rating h2{
     @apply font-bold text-[15px] 
    }
    .populer-card-content p{
-    @apply font-medium text-[15px]
+    @apply font-normal text-[14px]
    }
    .rating i{
     @apply text-[#ffc107]
@@ -150,7 +151,7 @@
                         <i class="ri-shopping-cart-2-line text-black"></i>
                     </div>
                     <div class="user-uses-btns flex gap-[1rem] ">
-                        <button class="bg-transparent border-3 border-[#179800] hover:bg-green ">Login</button>
+                        <button class="bg-transparent border-3 border-[#179800] hover:bg-green  ">Login</button>
                         <button class="hover:bg-transparent border-2       
                          border-green">Register</button>
                     </div>
@@ -168,11 +169,11 @@
     <header class=" bg-gradient-to-t  from-[#EFEBE3] to-[#FFFFFF]">
         <div class="container">
             <div class="hero-content">
-                <div class="text-center pt-[5rem]">
-                    <h2 class="text-[2.5rem] md:text-[3rem] md:mt-[2rem] lg:text-[3.8rem] font-black text-center ">
+                <div class="text-center pt-[5rem] sml:pt-[4rem]">
+                    <h2 class="text-[2.5rem] md:text-[3rem] md:mt-[2rem] lg:text-[3.8rem] font-black text-center sml:text-[2.2rem]  ">
                         Freshness <span class="text-[#179800]"> You Can <br>
                             Count</span> On, Prices You’ll Love!</h2>
-                    <p class="mt-[10px]">Shop your daily essentials at unbeatable prices. From fresh produce to pantry
+                    <p class="mt-[10px] ">Shop your daily essentials at unbeatable prices. From fresh produce to pantry
                         <br> staples, we’ve got you covered every day!
                     </p>
                 </div>
@@ -185,7 +186,7 @@
     <!-- Hero section End  -->
 
     <!-- Service Section Start -->
-    <section class="service py-[4rem]">
+    <section class="service py-[4rem] sml:py-[3rem]">
         <div class="container">
             <div class="service-content">
                 <h2 class="section-title"> Service</h2>
@@ -224,9 +225,9 @@
 
 
     <!-- Populer Product Section  -->
-    <section class="populer bg-gradient-to-t  from-[#dbd4c6] to-[#dfdada] py-[100px]">
+    <section class="populer bg-gradient-to-t  from-[#dbd4c6] to-[#dfdada] py-[2rem]">
         <div class="container">
-            <h2 class="section-title mb-[1rem]">Popular Products</h2>
+            <h2 class="section-title font-black mb-[1rem]">Popular Products</h2>
             <div class="populer-content lg:flex gap-[2rem] lg:gap-[1rem] justify-center  items-center">
                 <div class="populer-left flex-1">
                     <img class="w-[100%] object-cover" src="./assets/Group 14.png" alt="">
@@ -254,7 +255,7 @@
                             <div class="populer-card-content">
                                 <div class="rating">
                                     <i class="ri-star-fill"></i>
-                                    <h2>4.5</h2>
+                                    <h2 class="text-red-300">4.5</h2>
                                 </div>
                                 <h2>Tomato 500 g </h2>
                                 <p>$39.99</p>
@@ -623,7 +624,7 @@
             </div>
         </div>
         <p class="text-center text-[1rem] mt-[1rem] font-normal py-4">
-            &copy; 2025 All Rights Reserved | Developed by Abul Hasan
+         2025 All Rights Reserved | Developed by <br> Abul Hasan
         </p>
 
     </footer>
